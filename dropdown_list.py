@@ -2,19 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.support.ui import Select
-# import math
 
 
-# link = "http://suninjuly.github.io/simple_form_find_task.html"
-# link = "http://suninjuly.github.io/find_link_text"
+
+
 link_XPATH = " https://suninjuly.github.io/selects1.html"
 
 try:
     browser = webdriver.Chrome()
     browser.get(link_XPATH)
-    # m = str(math.ceil(math.pow(math.pi, math.e)*10000))
-    # link = browser.find_element(By.PARTIAL_LINK_TEXT, m)
-    # link.click()
+
     browser.execute_script("document.title = 'Abkhazia'; alert('Robots work');")
     num1 = browser.find_element(By.CSS_SELECTOR, "#num1")
 
